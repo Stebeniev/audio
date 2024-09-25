@@ -3,54 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    <link rel="icon" href="img/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Audio-player</title>
+    <link href="style.css" rel="stylesheet">
+    <title>Audio player</title>
 </head>
 <body>
-<div class="wrapper">
-    <div class="img-area">
-        <img src="" alt="">
+<div class="main-wrapper" id="main-wrapper">
+    <div class="cover-image">
+        <img src="" id="track-cover" alt="just-img">
     </div>
-    <div class="position">
-        <div class="controls">
-            <div class="play-pause">
-                <button class="play-stop" style="font-size: 35px">▷</button>
-            </div>
-        </div>
-        <div class="song-details">
-            <p class="artist"></p>
-            <p class="name"></p>
-        </div>
-        <div class="position-bottom">
-            <button id="prev" class="materials-icons">◁◁</button>
-            <button id="next" class="materials-icons">▷▷</button>
-        </div>
+    <div class="track">
+        <h3 class="track-title" id="track-title"></h3>
+        <p class="track-artist" id="track-artist"></p>
     </div>
-    <div class="timer-second">
-        <span class="uncurrent"></span>
+    <div class="dot-controls">
+        <button class="prev" id="prev"><<</button>
+        <button class="play-pause" id="play-pause">Play</button>
+        <button class="next" id="next">>></button>
     </div>
-    <div class="progress-area">
-        <div class="progress-bar"></div>
+    <div class="progress-wrapper">
+        <span class="time" id="time">00:00</span>
+        <label for="progress-bar"></label>
+        <input type="range" class="progress-bar" id="progress-bar" value="0" min="0" max="100">
+        <span class="duration" id="duration">--:--</span>
     </div>
-    <div class="timer-first">
-        <span class="current">0:00</span>
-    </div>
-    <audio id="main-audio" src=""></audio>
+    <audio id="audio" src=""></audio>
     <footer>
         <div class="footer">
-<!--            <a  class="link" href="https://rs.school/js-stage0/" target="_blank"><i>RS School</i></a>-->
-            <p><i>@2023</i></p>
-            <a class="link" href="https://github.com/Stebeniev" target="_blank"><i>Dmitriy</i></a>
+<!--            <a  class="link" href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><i>RS School</i></a>-->
+            <p><i> created @2024 by Dmitriy</i></p>
+<!--            <a class="link" href="https://github.com/Stebeniev" target="_blank"><i>Dmitriy</i></a>-->
         </div>
     </footer>
 </div>
-<script src="js.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>

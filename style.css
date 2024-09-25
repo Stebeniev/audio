@@ -3,159 +3,121 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 *::before,*::after {
     padding: 0;
     margin: 0;
 }
-html {
-    overflow-x: hidden;
-}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    /*background-image: url("../audio-player/img/lemonade.png");*/
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(10px);
+    font-family: 'Fuggles', sans-serif;
 }
-.wrapper {
-    width: 380px;
-    height: 450px;
+
+.main-wrapper {
+    margin: auto;
+    width: 480px;
+    height: 500px;
     box-shadow: 0 6px 15px;
     border-radius: 15px;
-    background: #797878;
+    text-align: center;
+    background: #f3cda7;
 }
-.img-area {
+
+.cover-image {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 250px;
     width: 100%;
     overflow: hidden;
-    /*background-image: url("../audio-player/img/lemonade.png");*/
 }
-.img-area img {
-    height: 100%;
+
+.cover-image img {
+    height: auto;
     width: 100%;
     object-fit: cover;
 }
-.song-details {
-    margin: 10px 0;
+
+.track {
+    margin: 20px 0;
 }
-.song-details .artist {
-    color: yellowgreen;
-    font-size: 35px;
+
+.track-title,
+.track-artist {
+    font-size: 30px;
 }
-.song-details .name {
-    color: white;
-    font-size: 15px;
-}
-.progress-area {
-    height: 5px;
-    width: 60%;
-    background: black;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-}
-.progress-area .progress-bar {
-    height: inherit;
-    width: 0;
-    border-radius: inherit;
-    background: black;
-    position: relative;
-}
-.position {
+
+.dot-controls {
+    height: 60px;
+    padding: 10px;
+    /*margin: 10px;*/
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.prev,
+.next {
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.prev:hover,
+.next:hover,
+.play-pause:hover {
+    color: white;
+    background-color: black;
+}
+
+.play-pause {
+    border: 1px solid black;
+    padding: 10px;
+    font-family: 'Fuggles', sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    margin-top: 20px;
 }
-.position-bottom {
+
+.progress-wrapper {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.play-stop {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    border: 2px solid white;
-    color: white;
-    background-color: #797878;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.materials-icons {
-    margin-top: 3px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid white;
-    color: white;
-    background-color: #797878;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.progress-bar {
+    width: 60%;
 }
 
-.play-stop::before {
-    content: "";
-    font-size: 35px;
-    color: white;
-    transform: translate(-50%, -50%);
-}
-
-.play-stop:hover {
-    background-color: #424040;
-}
-.materials-icons:hover {
-    color: #424040;
-}
-.timer-first,
-.timer-second {
-    font-size: 12px;
-    margin-left: 75px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-}
-.timer-first {
-    color: white;
-}
-.timer-second {
-    color: yellowgreen;
-    margin-left: 285px;
-}
-
-.progress-bar::before {
-    content: "";
-    position: absolute;
-    height: 10px;
-    width: 4px;
-    background: yellowgreen;
-    border-radius: 2px;
-    transform: translateY(-15%);
-    cursor: pointer;
-    right: -5px;
-    transition: 0.2s ease;
-}
 .footer {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     color: white;
     text-decoration: none;
 }
+
 .link {
-    font-family: 'Fuggles', sans-serif;
     text-decoration: none;
     color: white;
     font-size: 25px;
 }
+
+.link:hover {
+    color: black;
+}
+
 .footer p {
     font-size: 25px;
-    color: yellowgreen;
-    font-family: 'Fuggles', sans-serif;
+    color: white;
 }
