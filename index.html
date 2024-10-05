@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Audio player</title>
+</head>
+<body>
+<div class="main-wrapper" id="main-wrapper">
+    <div class="cover-image">
+        <img src="" id="track-cover" alt="just-img">
+    </div>
+    <div class="track">
+        <h3 class="track-title" id="track-title"></h3>
+        <p class="track-artist" id="track-artist"></p>
+    </div>
+    <div class="dot-controls">
+        <button class="prev" id="prev"><<</button>
+        <button class="play-pause" id="play-pause">Play</button>
+        <button class="next" id="next">>></button>
+    </div>
+    <div class="progress-wrapper">
+        <span class="time" id="time">00:00</span>
+        <label for="progress-bar"></label>
+        <input type="range" class="progress-bar" id="progress-bar" value="0" min="0" max="100">
+        <span class="duration" id="duration">--:--</span>
+    </div>
+    <audio id="audio" src=""></audio>
+    <footer>
+        <div class="footer">
+<!--            <a  class="link" href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><i>RS School</i></a>-->
+            <p><i> created @2024 by Dmitriy</i></p>
+<!--            <a class="link" href="https://github.com/Stebeniev" target="_blank"><i>Dmitriy</i></a>-->
+        </div>
+    </footer>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
